@@ -1,18 +1,11 @@
 import { createContext, useState, type ReactNode } from 'react';
-
-export interface Product {
-  id?: number;
-  name: string;
-  price: string | number;
-  image: string;
-  category?: string;
-}
+import type { IProduct } from '../common/interfaces/product.interface';
 
 interface ShopContextType {
-  cart: Product[];
-  wishlist: Product[];
-  addToCart: (product: Product) => void;
-  addToWishlist: (product: Product) => void;
+  cart: IProduct[];
+  wishlist: IProduct[];
+  addToCart: (product: IProduct) => void;
+  addToWishlist: (product: IProduct) => void;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -28,26 +21,26 @@ interface ShopProviderProps {
 }
 
 export function ShopProvider({ children }: ShopProviderProps) {
-  const [cart, setCart] = useState<Product[]>([]);
-  const [wishlist, setWishlist] = useState<Product[]>([]);
+  const [cart, setCart] = useState<IProduct[]>([]);
+  const [wishlist, setWishlist] = useState<IProduct[]>([]);
 
-const addToCart = (product: Product) => {
-  setCart((prevCart) => {
-    const exists = prevCart.some((item) => item.id === product.id);
-    if (exists) return prevCart; 
-    return [...prevCart, product];
-  });
-};
+  const addToCart = (product: IProduct) => {
+    setCart((prevCart) => {
+      const exists = prevCart.some((item) => item.id === product.id);
+      if (exists) return prevCart; 
+      return [...prevCart, product];
+    });
+  };
 
-const addToWishlist = (product: Product) => {
-  setWishlist((prevWishlist) => {
-    const exists = prevWishlist.some((item) => item.id === product.id);
-    if (exists) {
-      return prevWishlist.filter((item) => item.id !== product.id); 
-    }
-    return [...prevWishlist, product];
-  });
-};
+  const addToWishlist = (product: IProduct) => {
+    setWishlist((prevWishlist) => {
+      const exists = prevWishlist.some((item) => item.id === product.id);
+      if (exists) {
+        return prevWishlist.filter((item) => item.id !== product.id); 
+      }
+      return [...prevWishlist, product];
+    });
+  };
 
   return (
     <ShopContext.Provider

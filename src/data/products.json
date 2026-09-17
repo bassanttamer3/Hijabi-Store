@@ -1,0 +1,30 @@
+[
+{
+"id": "h13",
+"title": "Dusty Rose Everyday Hijab",
+"price": 19.99,
+"category": "hijabs",
+"description": "A soft dusty rose everyday hijab with a lightweight premium feel and elegant natural drape. Designed for comfortable modern styling.",
+"colorHex": "#B76E79",
+"images": {
+"light": "/Products/hijabs/dusty-rose/dusty-rose-light.png",
+"lightMedium": "/Products/hijabs/dusty-rose/dusty-rose-light-medium.png",
+"mediumTan": "/Products/hijabs/dusty-rose/dusty-rose-medium-tan.png",
+"deep": "/Products/hijabs/dusty-rose/dusty-rose-deep.png"
+}
+},
+{
+"id": "s1",
+"title": "Dusty Rose Everyday Scarve",
+"price": 19.99,
+"category": "scarves",
+"description": "A soft dusty rose everyday Scarve with a lightweight premium feel and elegant natural drape. Designed for comfortable modern styling.",
+"colorHex": "#B76E79",
+"images": {
+"light": "/Products/scarves/dusty-rose/dusty-rose-light.png",
+"lightMedium": "/Products/scarves/dusty-rose/dusty-rose-light-medium.png",
+"mediumTan": "/Products/scarves/dusty-rose/dusty-rose-medium-tan.png",
+"deep": "/Products/scarves/dusty-rose/dusty-rose-deep.png"
+ }
+}
+]

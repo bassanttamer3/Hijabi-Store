@@ -9,7 +9,7 @@ function Navbar(){
     const { cart, wishlist } = useContext(ShopContext);
   return(
     <>
-    <nav className=' flex justify-between items-center text-lg bg-gray-100 shadow-lg rounded-2xl py-10 px-10 '>
+    <nav className=' flex justify-between items-center text-lg bg-gray-200 shadow-lg rounded-2xl py-10 px-10 '>
 <Link to="/" className="text-3xl font-black py-2">
   HI<span className="text-[#E0A0A1]">J</span>ABI
 </Link>

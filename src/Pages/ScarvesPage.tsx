@@ -1,10 +1,22 @@
-function scarvesPage() {                
+import ProductCard from "../components/ProductCard";
+import productsData from '../data/products.json';
+import type { IProduct } from '../common/interfaces/product.interface';
+
+function ScarvesPage() {
+    const allProducts = productsData as IProduct[];
+
+    const scarves = allProducts.filter(item => item.category === 'scarves');  
     return (    
-        (<div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl font-bold mb-4">Scarves Page</h1>
-      <p className="text-lg text-gray-600">This is the Scarves page of the e-commerce website.</p>
-    </div>)
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <h1 className="text-4xl font-bold mb-5 mt-10">Scarves Collection</h1>
+        <div className="flex flex-wrap gap-8 justify-center">
+        {scarves.map((scarf) => (
+            <ProductCard key={scarf.id} {...scarf} />
+        ))}
+    </div>
+
+    </div>
   );
-}       
-export default scarvesPage;
- 
+}   
+export default ScarvesPage;
+
