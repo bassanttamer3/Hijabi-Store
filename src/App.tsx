@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import "./App.css";
 import HeroSection from "./components/HeroSection";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import HijabsPage from "./Pages/HijabsPage";
 import KhimarsPage from "./Pages/KhimarsPage";
 import AccessoriesPage from "./Pages/AccessoriesPage";
