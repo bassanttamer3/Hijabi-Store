@@ -13,11 +13,11 @@ function HeroSection() {
         </p>
       </div>
 
-      <div className="flex justify-end items-center">
+      <div className="flex justify-end items-center  ">
         <img 
           src={hijabiImg} 
           alt="Hero" 
-          className="w-95 h-auto rounded-2xl " 
+          className="w-100 h-auto  -translate-y-10 " 
         />
       </div>
 

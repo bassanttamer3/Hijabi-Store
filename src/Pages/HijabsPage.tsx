@@ -1,30 +1,20 @@
 import ProductCard from "../components/ProductCard";
-import Girl1 from "../assets/Girl1.png";
-import Girl2 from "../assets/Girl2.png"
+import productsData from '../data/products.json';
+import type { IProduct } from '../common/interfaces/product.interface';
+
 function HijabsPage() {
-    const hijabsList = [
-        { id: 1, name: "Premium Silk Hijab", title: "Premium Silk Hijab", price: "24.99", image: Girl1 },
-        { id: 2, name: "Chiffon Everyday Hijab", title: "Chiffon Everyday Hijab", price: "18.99", image: Girl2 },
+  const allProducts = productsData as IProduct[];
+  const hijabs = allProducts.filter(item => item.category === 'hijabs');
 
-    ];
-    return (    
+  return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-4xl font-bold mb-5 mt-10">Hijabs Collection</h1>
-        <div className="flex flex-wrap gap-8 justify-center">
-        {hijabsList.map((hijab) => (
-            <ProductCard
-            key={hijab.id}
-            id={hijab.id}
-            title={hijab.title}
-            name={hijab.name}
-            price={hijab.price}
-            image={hijab.image}
-            />
+      <h1 className="text-4xl font-bold mb-5 mt-10">Hijabs Collection</h1>
+      <div className="flex flex-wrap gap-8 justify-center">
+        {hijabs.map((hijab) => (
+          <ProductCard key={hijab.id} {...hijab} />
         ))}
-    </div>
-
+      </div>
     </div>
   );
-}   
+}
 export default HijabsPage;
-

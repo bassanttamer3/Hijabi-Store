@@ -1,15 +1,14 @@
-import Navbar from './components/Navbar';
-import './App.css';
-import ProductCard from './components/ProductCard';
-import HeroSection from './components/HeroSection';
-import HijabsPage from './Pages/HijabsPage';
-import KhimarsPage from './Pages/KhimarsPage';
-import AccessoriesPage from './Pages/AccessoriesPage';
-import ScarvesPage from './Pages/ScarvesPage';
-import MyItemsPage from './Pages/MyItemsPage';
-import Girl1 from './assets/Girl1.png';
+import Navbar from "./components/Navbar";
+import "./App.css";
+import HeroSection from "./components/HeroSection";
+import Footer from "./components/footer";
+import HijabsPage from "./Pages/HijabsPage";
+import KhimarsPage from "./Pages/KhimarsPage";
+import AccessoriesPage from "./Pages/AccessoriesPage";
+import ScarvesPage from "./Pages/ScarvesPage";
+import MyItemsPage from "./Pages/MyItemsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ShopProvider } from './Context/ShopContext';
+import { ShopProvider } from "./Context/ShopContext";
 
 function App() {
   return (
@@ -17,14 +16,14 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route 
-            path="/" 
+          <Route
+            path="/"
             element={
               <>
                 <HeroSection />
-                <ProductCard id={1} name="Silk Hijab" price="19.99" image={Girl1} />
+                <Footer />
               </>
-            } 
+            }
           />
           <Route path="/hijabs" element={<HijabsPage />} />
           <Route path="/khimars" element={<KhimarsPage />} />
