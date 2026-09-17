@@ -63,8 +63,6 @@ function Footer() {
                             +201212478458
                         </p>
                     </section>
-
-
                     <section className="flex flex-col space-y-3">
                         <h2 className="text-2xl font-bold mb-2">Contact Us</h2>
 
